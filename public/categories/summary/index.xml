@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Summary on liumo_game_blog</title>
+    <link>http://localhost:1313/categories/summary/</link>
+    <description>Recent content in Summary on liumo_game_blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Aug 2025 14:28:29 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/summary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>上手用markdown记录godot项目学习流程</title>
+      <link>http://localhost:1313/posts/getting-started/install-and-first-project/</link>
+      <pubDate>Tue, 19 Aug 2025 14:28:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/getting-started/install-and-first-project/</guid>
+      <description>&lt;p&gt;#进行markdown的基本语法学习&#xA;##标题 段落 换行 强调&lt;/p&gt;&#xA;&lt;p&gt;标题的对应标志是#号，几级标题对应几个#号。想要分段就直接的用空行进行分段，这样就会自动的分段了。&lt;/p&gt;&#xA;&lt;p&gt;这样就是第二段。在一句话里面我想要进行强制换行，只需要&lt;br&gt;&#xA;打两个空格并且点击enter就能实现强制换行了，但是我不懂空格的作用是什么所以我现在是&#xA;直接打了一个enter来进行比对。&lt;/p&gt;&#xA;&lt;p&gt;我又进行了一次分段，这次想要实现的是强调效果。强调有三个等级，分别是斜体，粗体还有粗斜体。强调的对应标志是*，有几个&lt;em&gt;号就是几级。_斜体_还有&lt;strong&gt;粗体&lt;/strong&gt;还有最后的&lt;/em&gt;&lt;strong&gt;粗斜体&lt;/strong&gt;*。这个检测的有点奇怪，等下在网站上看下效果。&lt;/p&gt;&#xA;&lt;p&gt;##有序、无序列表 链接（行内&amp;amp;引用）图片&#xA;1.苹果&#xA;2.香蕉&#xA;3.梨&#xA;数字加点号（有序列表）&#xA;-项目1&#xA;-项目2&#xA;-子项目（空格或者tab）&#xA;-项目三&lt;/p&gt;&#xA;&lt;p&gt;行内式，这是一个[链接的显示名称]（https://www.example.com）括号里面显示的是链接地址。&#xA;这是一个&lt;a href=&#34;https://www.example.com&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;引用式链接&lt;/a&gt;和另一个&lt;a href=&#34;https://www.github.com&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;引用式链接&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;图片的引用各式和链接几乎一样，只是前面加了一个！&#xA;！[图片名称]（https://example.com/cat.jpg ）&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;##代码 引用 表格 任务列表&#xA;&lt;code&gt;printf()&lt;/code&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;hello_world&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;hello,world&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;&#xA;&lt;p&gt;大于号表示引用&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;不知道拿来干什么的&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;表格还不会&#xA;|ui|人物|场景&#xA;|：-|：-：|-：|&#xA;|靠左|居中|靠右|&lt;/p&gt;&#xA;&lt;p&gt;任务列表&#xA;-[x]学会markdown的基本用法&#xA;-[]学会godot的基本用法&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
