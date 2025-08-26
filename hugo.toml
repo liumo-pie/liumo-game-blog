@@ -185,7 +185,7 @@ languageName = ":uk:"
 # 菜单配置 - 添加这部分
 [[menu.main]]
 name = "Blog"
-url = "posts/"
+url = "/posts/"
 weight = 2
 
 [[menu.main]]
