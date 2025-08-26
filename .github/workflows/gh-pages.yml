@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ] # 当你推送到 main 分支时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive # 重要！拉取主题子模块
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest" # 或指定一个稳定版本，如 "0.125.7"
+          extended: true # 必须！使用 Extended 版本
+
+      - name: Build
+        run: hugo --minify # 构建网站并压缩输出
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main' # 只在 main 分支触发
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub 自动提供
+          publish_dir: ./public # Hugo 默认输出目录
+          # 如果部署到项目仓库的非根目录 (如 docs/)，修改 publish_dir 并配置 GitHub Pages 源为 docs/ 文件夹
