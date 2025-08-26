@@ -4,16 +4,23 @@ on:
   push:
     branches: [ main ]
 
+# 添加并发控制 - 防止多个部署冲突
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # 关键！给工作流写入权限
+      contents: write
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0  # 建议添加，获取完整历史
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -29,4 +36,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          force_orphan: true  # 强制推送，避免历史冲突
+          force_orphan: true
+          # 建议添加用户信息配置
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
