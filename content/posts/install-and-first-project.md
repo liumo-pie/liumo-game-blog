@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2025-08-19T14:28:29+08:00
 title = "上手用markdown记录godot项目学习流程"
 description = "基本的markdown语法学习"
