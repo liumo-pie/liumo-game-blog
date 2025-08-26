@@ -1,4 +1,4 @@
-baseURL = "http://liumo_game_blog.com"
+baseURL = "https://liumo-pie.github.io/liumo-game-blog/"
 title = "liumo_game_blog"
 theme = "hugo-coder"
 languageCode = "en"
