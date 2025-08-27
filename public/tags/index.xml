@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on liumo_game_blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://localhost:1313/liumo-game-blog/tags/</link>
     <description>Recent content in Tags on liumo_game_blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 19 Aug 2025 14:28:29 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/liumo-game-blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Game</title>
-      <link>http://localhost:1313/tags/game/</link>
+      <link>http://localhost:1313/liumo-game-blog/tags/game/</link>
       <pubDate>Tue, 19 Aug 2025 14:28:29 +0800</pubDate>
-      <guid>http://localhost:1313/tags/game/</guid>
+      <guid>http://localhost:1313/liumo-game-blog/tags/game/</guid>
       <description></description>
     </item>
     <item>
       <title>Godot</title>
-      <link>http://localhost:1313/tags/godot/</link>
+      <link>http://localhost:1313/liumo-game-blog/tags/godot/</link>
       <pubDate>Tue, 19 Aug 2025 14:28:29 +0800</pubDate>
-      <guid>http://localhost:1313/tags/godot/</guid>
+      <guid>http://localhost:1313/liumo-game-blog/tags/godot/</guid>
       <description></description>
     </item>
   </channel>

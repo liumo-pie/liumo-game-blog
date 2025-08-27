@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>http://localhost:1313/en/sitemap.xml</loc>
-    
-      <lastmod>2025-08-19T14:28:29+08:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/pt-br/sitemap.xml</loc>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/liumo-game-blog/blogs/</loc>
+    <lastmod>2025-08-27T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/</loc>
+    <lastmod>2025-08-27T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/authors/</loc>
+    <lastmod>2025-08-19T14:28:29+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/categories/</loc>
+    <lastmod>2025-08-19T14:28:29+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/tags/game/</loc>
+    <lastmod>2025-08-19T14:28:29+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/tags/godot/</loc>
+    <lastmod>2025-08-19T14:28:29+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/authors/liumo/</loc>
+    <lastmod>2025-08-19T14:28:29+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/categories/summary/</loc>
+    <lastmod>2025-08-19T14:28:29+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/tags/</loc>
+    <lastmod>2025-08-19T14:28:29+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/blogs/install-and-first-project/</loc>
+    <lastmod>2025-08-19T14:28:29+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/series/</loc>
+  </url>
+</urlset>
