@@ -30,11 +30,14 @@ jobs:
 
       - name: Build
         run: hugo --minify
-
+      
+      - name: List contents of public dir
+        run: ls -la public
+        
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
           publish_dir: ./public
           force_orphan: true
           # 建议添加用户信息配置
