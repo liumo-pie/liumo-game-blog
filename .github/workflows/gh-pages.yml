@@ -10,17 +10,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-          fetch-depth: 0  # 建议添加，获取完整历史
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -29,17 +26,31 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --cleanDestinationDir
+        run: rm -rf public && hugo --minify --cleanDestinationDir
       
       - name: List contents of public dir
         run: ls -la public
         
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      # 使用 GitHub 官方的上传页面工件动作
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
-          publish_dir: ./public
-          force_orphan: true
-          # 建议添加用户信息配置
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          path: ./public
+
+  deploy:
+    needs: build  # 确保在 build 作业完成后运行
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write      # 必须要有 pages 写入权限
+      id-token: write   # 必须要有 id-token 权限
+    
+    # 配置环境，这是触发页面更新的关键
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      # 使用 GitHub 官方的部署页面动作
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
