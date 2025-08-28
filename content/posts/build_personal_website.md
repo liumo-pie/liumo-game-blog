@@ -34,8 +34,8 @@ series = []
 
 ### hugo的基本结构
 - content:存放所有的博客文章
- -content和界面的互动设置。
-     -hugo.toml  
+ - content和界面的互动设置。
+     - hugo.toml  
     ```
 
     ```
@@ -52,17 +52,17 @@ series = []
 2. bash 
    ```git remote add origin https://github.com/liumo-pie/liumo-game-blog.git```
 3. 实现自动化的页面部署。保证每次推送到main分支都直接部署到网站上并进行页面渲染。
--创建工作流目录
-   -在根目录创建`.github/workflows/gh-pages.yml`
-   -编辑gh-pages.yml目录
-   ```
-   name: Deploy to GitHub Pages
+- 创建工作流目录
+   - 在根目录创建`.github/workflows/gh-pages.yml`
+   - 编辑gh-pages.yml目录  
+```
+      name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
 
-# 添加并发控制 - 防止多个部署冲突
+      # 添加并发控制 - 防止多个部署冲突
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -112,7 +112,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-   ```
+  
+```
 4. 提交并推送
 ```
     git add .
