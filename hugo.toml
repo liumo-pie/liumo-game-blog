@@ -187,6 +187,7 @@ languageName = ":uk:"
 name = "Blog"
 url = "posts/"
 weight = 2
+identifier="blog"
 
 [[menu.main]]
 name = "About"
@@ -202,3 +203,9 @@ weight = 3
 name = "Contact"
 url = "contact/"
 weight = 4
+
+[[menu.main]]
+name ="来建个人网站吧！"
+url="posts/website/"
+weight= 2
+parent="blog"

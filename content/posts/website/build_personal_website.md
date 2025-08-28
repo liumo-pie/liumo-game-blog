@@ -5,7 +5,7 @@ title = "构建个人博客网站全流程回顾"
 description = "个人博客搭建"
 slug = ""
 authors = ["liumo"]
-tags = ["webbsite","blog"]
+tags = ["website","blog"]
 categories = ["summary"]
 externalLink = ""
 series = []
@@ -26,7 +26,7 @@ series = []
 9. 添加这个子模块，初始化git仓库`git init`  
 `git submodule add https://github.com/liumo-pie/hugo-coder.git themes/hugo_coder`  
 子模块的改动会直接影响到子模块原先的项目，一般需要提交两次，一次提交到原项目，一次提交到现在的项目。
-10. 现在可以使用模板来快速的创建自己的博客了。
+1.  现在可以使用模板来快速的创建自己的博客了。 hugo new posts/install-and-first-project.md(会添加上渲染所需要的参数)
     
 ## 二.主题的使用
 ### 主题配置文件hugo.toml
