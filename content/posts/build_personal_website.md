@@ -21,3 +21,4 @@ series = []
 4. 终端导航到自己目标位置 cd
 5. 创建Hugo站点 hugo new site my-godot-learning-blog
 6. cd进入项目目录
+7. 选中自己想要的主题了，[Hugo主题网站](https://themes.gohugo.io/)，我选中了coder，为了后续可以对主题进一步的开发和利用。拉取分支之后指定自己的分支为子模块。
