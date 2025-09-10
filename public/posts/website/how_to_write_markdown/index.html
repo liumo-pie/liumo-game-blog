@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/liumo-game-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=liumo-game-blog/livereload" data-no-instant defer></script>
+  <title>
+  上手用markdown记录godot项目学习流程 · liumo_game_blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="liumo">
+<meta name="description" content="基本的markdown语法学习">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="上手用markdown记录godot项目学习流程">
+  <meta name="twitter:description" content="基本的markdown语法学习">
+
+<meta property="og:url" content="http://localhost:1313/liumo-game-blog/posts/website/how_to_write_markdown/">
+  <meta property="og:site_name" content="liumo_game_blog">
+  <meta property="og:title" content="上手用markdown记录godot项目学习流程">
+  <meta property="og:description" content="基本的markdown语法学习">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-19T14:28:29+08:00">
+    <meta property="article:modified_time" content="2025-08-19T14:28:29+08:00">
+    <meta property="article:tag" content="Godot">
+    <meta property="article:tag" content="Game">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/liumo-game-blog/posts/website/how_to_write_markdown/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/liumo-game-blog/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/liumo-game-blog/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/liumo-game-blog/">
+      liumo_game_blog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/contact/">Contact</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/liumo-game-blog/posts/website/how_to_write_markdown/">
+              上手用markdown记录godot项目学习流程
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-08-19T14:28:29&#43;08:00">
+                August 19, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              One-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/liumo-game-blog/authors/liumo/">Liumo</a></div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/liumo-game-blog/categories/summary/">Summary</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/liumo-game-blog/tags/godot/">Godot</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/liumo-game-blog/tags/game/">Game</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="进行markdown的基本语法学习">
+  进行markdown的基本语法学习
+  <a class="heading-link" href="#%e8%bf%9b%e8%a1%8cmarkdown%e7%9a%84%e5%9f%ba%e6%9c%ac%e8%af%ad%e6%b3%95%e5%ad%a6%e4%b9%a0">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="标题-段落-换行-强调">
+  标题 段落 换行 强调
+  <a class="heading-link" href="#%e6%a0%87%e9%a2%98-%e6%ae%b5%e8%90%bd-%e6%8d%a2%e8%a1%8c-%e5%bc%ba%e8%b0%83">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>标题的对应标志是#号，几级标题对应几个#号。想要分段就直接的用空行进行分段，这样就会自动的分段了。</p>
+<p>这样就是第二段。在一句话里面我想要进行强制换行，只需要<br>
+打两个空格并且点击enter就能实现强制换行了，但是我不懂空格的作用是什么所以我现在是
+直接打了一个enter来进行比对。还是需要打两个空格并且enter</p>
+<p>我又进行了一次分段，这次想要实现的是强调效果。强调有三个等级，分别是斜体，粗体还有粗斜体。强调的对应标志是*，有几个*号就是几级。_斜体_还有<strong>粗体</strong> 还有最后的 <em><strong>粗斜体</strong></em>。这个检测的有点奇怪，等下在网站上看下效果。</p>
+<h2 id="有序无序列表-链接行内引用图片">
+  有序、无序列表 链接（行内&amp;引用）图片
+  <a class="heading-link" href="#%e6%9c%89%e5%ba%8f%e6%97%a0%e5%ba%8f%e5%88%97%e8%a1%a8-%e9%93%be%e6%8e%a5%e8%a1%8c%e5%86%85%e5%bc%95%e7%94%a8%e5%9b%be%e7%89%87">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>苹果</li>
+<li>香蕉</li>
+<li>梨
+数字加点号（有序列表）</li>
+</ol>
+<ul>
+<li>项目1</li>
+<li>项目2
+<ul>
+<li>子项目（空格或者tab）</li>
+</ul>
+</li>
+<li>项目三</li>
+</ul>
+<p>行内式，这是一个<a href="https://www.example.com"  class="external-link" target="_blank" rel="noopener">链接的显示名称</a>括号里面显示的是链接地址。
+这是一个<a href="https://www.example.com"  class="external-link" target="_blank" rel="noopener">引用式链接</a>和另一个<a href="https://www.github.com"  class="external-link" target="_blank" rel="noopener">引用式链接</a>。</p>
+<p>图片的引用各式和链接几乎一样，只是前面加了一个！
+！<a href="https://example.com/cat.jpg"  class="external-link" target="_blank" rel="noopener">图片名称</a></p>
+<hr>
+<h2 id="代码-引用-表格-任务列表">
+  代码 引用 表格 任务列表
+  <a class="heading-link" href="#%e4%bb%a3%e7%a0%81-%e5%bc%95%e7%94%a8-%e8%a1%a8%e6%a0%bc-%e4%bb%bb%e5%8a%a1%e5%88%97%e8%a1%a8">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><code>printf()</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hello,world&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><blockquote>
+<p>大于号表示引用</p>
+<blockquote>
+<p>不知道拿来干什么的</p></blockquote></blockquote>
+<p>表格还不会</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">ui</th>
+          <th style="text-align: center">人物</th>
+          <th style="text-align: right">场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">靠左</td>
+          <td style="text-align: center">居中</td>
+          <td style="text-align: right">靠右</td>
+      </tr>
+  </tbody>
+</table>
+<p>任务列表</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 学会markdown的基本用法</li>
+<li>[] 学会godot的基本用法</li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     liumo 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/liumo-game-blog/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

@@ -6,20 +6,34 @@
     <description>Recent content in Tags on liumo_game_blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Aug 2025 14:28:29 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Aug 2025 16:14:50 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/liumo-game-blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Game</title>
       <link>http://localhost:1313/liumo-game-blog/tags/game/</link>
-      <pubDate>Tue, 19 Aug 2025 14:28:29 +0800</pubDate>
+      <pubDate>Fri, 29 Aug 2025 16:14:50 +0800</pubDate>
       <guid>http://localhost:1313/liumo-game-blog/tags/game/</guid>
       <description></description>
     </item>
     <item>
       <title>Godot</title>
       <link>http://localhost:1313/liumo-game-blog/tags/godot/</link>
-      <pubDate>Tue, 19 Aug 2025 14:28:29 +0800</pubDate>
+      <pubDate>Fri, 29 Aug 2025 16:14:50 +0800</pubDate>
       <guid>http://localhost:1313/liumo-game-blog/tags/godot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/liumo-game-blog/tags/blog/</link>
+      <pubDate>Tue, 26 Aug 2025 14:28:29 +0800</pubDate>
+      <guid>http://localhost:1313/liumo-game-blog/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Website</title>
+      <link>http://localhost:1313/liumo-game-blog/tags/website/</link>
+      <pubDate>Tue, 26 Aug 2025 14:28:29 +0800</pubDate>
+      <guid>http://localhost:1313/liumo-game-blog/tags/website/</guid>
       <description></description>
     </item>
   </channel>
