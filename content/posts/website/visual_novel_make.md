@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2025-09-10T16:09:23+08:00
 title = "学习用godot制作视觉小说"
 description = "仿逆转裁判"
