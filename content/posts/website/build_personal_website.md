@@ -1,5 +1,5 @@
 +++
-draft = false
+draft = true
 date = 2025-08-26T14:28:29+08:00
 title = "构建个人博客网站全流程回顾"
 description = "个人博客搭建"
@@ -124,4 +124,5 @@ jobs:
 5. 配置githubpages
 - 进入你的 GitHub 仓库 ->Settings-> Pages。
 -Build and deployment里面的source选中Github Actions
+6. 本地进行测试的命令`hugo server -D --port 1313 --bind 0.0.0.0se`
 # 完结撒花

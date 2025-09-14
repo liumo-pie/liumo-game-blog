@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/liumo-game-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=liumo-game-blog/livereload" data-no-instant defer></script>
+  <title>
+  git基础使用 · liumo_game_blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="liumo">
+<meta name="description" content="
+  git的基础命令
+  
+    
+    Link to heading
+  
+
+
+  使用代理的链接方式
+  
+    
+    Link to heading
+  
+
+
+使用的是v2aryN，代理命令为  (有人说根本没有https，之后看下)
+git config --global http.proxy &#39;socks5://127.0.0.1:10808
+使用的是clash，代理命令为
+git config --global http.proxy &#39;http://127.0.0.1:7890&#39;
+使用系统设置（还没试过）
+set https_proxy=127.0.0.1:10808
+清除系统设置
+git config --global unset http.proxy
+
+
+  基本项目运转流程
+  
+    
+    Link to heading
+  
+
+万能的命令 git &lt;指令&gt; -h
+可以查看各种命令的基础参数和用法
+一个-为短命令，也就是简写，&ndash;为长命令，也就是全名，[-no]这种为可选内容，&ndash;[no-]option：代表一对开关：&ndash;option 和 &ndash;no-option，&lt;占位符&gt;一般是参数信息，在help文档里面的占位符里面的显示会告诉你是要传什么类型的参数进去
+
+  起始点为本地有项目
+  
+    
+    Link to heading
+  
+
+
+初始化本地仓库
+git init
+把代码提交到暂存区
+git add .
+提交到本地仓库，并添加提交信息
+git commit -m &quot;提交信息&quot;
+关联远程仓库地址(需要事先在github上面进行创建)
+git remote add origin &lt;远程仓库的url&gt;
+现在是切换到了远程仓库的分支里面进行操作了
+git add .
+提交到远程仓库
+git commit -m &quot;提交信息&quot;
+推送到远程仓库
+git push -u origin main
+
+
+  本地拉分支进行修改
+  
+    
+    Link to heading
+  
+
+
+查看本地所有分支，和上面一样可以在这个分支上面进行暂存和提交
+git branch
+创建并切换分支
+git checkout -b &lt;新分支名称&gt;
+创建远程分支并建立跟踪关系
+git push -u origin &lt;远程分支名称&gt;
+后续只需要进行push和pull就可以了
+
+
+  对比和学习
+  
+    
+    Link to heading
+  
+
+好的，完全理解！命令行虽然强大，但看代码差异确实不直观。下面我为你总结完整流程，并重点介绍如何用命令行调用直观的图形化工具来查看代码，两者结合才是最佳方案。">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="git基础使用">
+  <meta name="twitter:description" content="git的基础命令Link to heading使用代理的链接方式Link to heading使用的是v2aryN，代理命令为 (有人说根本没有https，之后看下) git config --global http.proxy &#39;socks5://127.0.0.1:10808 使用的是clash，代理命令为 git config --global http.proxy &#39;http://127.0.0.1:7890&#39; 使用系统设置（还没试过） set https_proxy=127.0.0.1:10808 清除系统设置
+git config --global unset http.proxy 基本项目运转流程Link to heading万能的命令 git &lt;指令&gt; -h
+可以查看各种命令的基础参数和用法 一个-为短命令，也就是简写，–为长命令，也就是全名，[-no]这种为可选内容，–[no-]option：代表一对开关：–option 和 –no-option，&lt;占位符&gt;一般是参数信息，在help文档里面的占位符里面的显示会告诉你是要传什么类型的参数进去
+起始点为本地有项目Link to heading初始化本地仓库 git init 把代码提交到暂存区 git add . 提交到本地仓库，并添加提交信息 git commit -m &#34;提交信息&#34; 关联远程仓库地址(需要事先在github上面进行创建) git remote add origin &lt;远程仓库的url&gt; 现在是切换到了远程仓库的分支里面进行操作了 git add . 提交到远程仓库 git commit -m &#34;提交信息&#34; 推送到远程仓库 git push -u origin main 本地拉分支进行修改Link to heading查看本地所有分支，和上面一样可以在这个分支上面进行暂存和提交 git branch 创建并切换分支 git checkout -b &lt;新分支名称&gt; 创建远程分支并建立跟踪关系 git push -u origin &lt;远程分支名称&gt; 后续只需要进行push和pull就可以了 对比和学习Link to heading好的，完全理解！命令行虽然强大，但看代码差异确实不直观。下面我为你总结完整流程，并重点介绍如何用命令行调用直观的图形化工具来查看代码，两者结合才是最佳方案。">
+
+<meta property="og:url" content="http://localhost:1313/liumo-game-blog/posts/website/git%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
+  <meta property="og:site_name" content="liumo_game_blog">
+  <meta property="og:title" content="git基础使用">
+  <meta property="og:description" content="git的基础命令Link to heading使用代理的链接方式Link to heading使用的是v2aryN，代理命令为 (有人说根本没有https，之后看下) git config --global http.proxy &#39;socks5://127.0.0.1:10808 使用的是clash，代理命令为 git config --global http.proxy &#39;http://127.0.0.1:7890&#39; 使用系统设置（还没试过） set https_proxy=127.0.0.1:10808 清除系统设置
+git config --global unset http.proxy 基本项目运转流程Link to heading万能的命令 git &lt;指令&gt; -h
+可以查看各种命令的基础参数和用法 一个-为短命令，也就是简写，–为长命令，也就是全名，[-no]这种为可选内容，–[no-]option：代表一对开关：–option 和 –no-option，&lt;占位符&gt;一般是参数信息，在help文档里面的占位符里面的显示会告诉你是要传什么类型的参数进去
+起始点为本地有项目Link to heading初始化本地仓库 git init 把代码提交到暂存区 git add . 提交到本地仓库，并添加提交信息 git commit -m &#34;提交信息&#34; 关联远程仓库地址(需要事先在github上面进行创建) git remote add origin &lt;远程仓库的url&gt; 现在是切换到了远程仓库的分支里面进行操作了 git add . 提交到远程仓库 git commit -m &#34;提交信息&#34; 推送到远程仓库 git push -u origin main 本地拉分支进行修改Link to heading查看本地所有分支，和上面一样可以在这个分支上面进行暂存和提交 git branch 创建并切换分支 git checkout -b &lt;新分支名称&gt; 创建远程分支并建立跟踪关系 git push -u origin &lt;远程分支名称&gt; 后续只需要进行push和pull就可以了 对比和学习Link to heading好的，完全理解！命令行虽然强大，但看代码差异确实不直观。下面我为你总结完整流程，并重点介绍如何用命令行调用直观的图形化工具来查看代码，两者结合才是最佳方案。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-13T07:50:52+08:00">
+    <meta property="article:modified_time" content="2025-09-13T07:50:52+08:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/liumo-game-blog/posts/website/git%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/liumo-game-blog/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/liumo-game-blog/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/liumo-game-blog/">
+      liumo_game_blog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/contact/">Contact</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/liumo-game-blog/posts/website/git%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
+              git基础使用
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-09-13T07:50:52&#43;08:00">
+                September 13, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="git的基础命令">
+  git的基础命令
+  <a class="heading-link" href="#git%e7%9a%84%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="使用代理的链接方式">
+  使用代理的链接方式
+  <a class="heading-link" href="#%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%90%86%e7%9a%84%e9%93%be%e6%8e%a5%e6%96%b9%e5%bc%8f">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>使用的是v2aryN，代理命令为  (有人说根本没有https，之后看下)
+<code>git config --global http.proxy 'socks5://127.0.0.1:10808</code></li>
+<li>使用的是clash，代理命令为
+<code>git config --global http.proxy 'http://127.0.0.1:7890'</code></li>
+<li>使用系统设置（还没试过）
+<code>set https_proxy=127.0.0.1:10808</code></li>
+<li>清除系统设置<br>
+<code>git config --global unset http.proxy</code></li>
+</ol>
+<h2 id="基本项目运转流程">
+  基本项目运转流程
+  <a class="heading-link" href="#%e5%9f%ba%e6%9c%ac%e9%a1%b9%e7%9b%ae%e8%bf%90%e8%bd%ac%e6%b5%81%e7%a8%8b">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>万能的命令 git &lt;指令&gt; -h<br>
+可以查看各种命令的基础参数和用法
+一个-为短命令，也就是简写，&ndash;为长命令，也就是全名，[-no]这种为可选内容，&ndash;[no-]option：代表一对开关：&ndash;option 和 &ndash;no-option，&lt;占位符&gt;一般是参数信息，在help文档里面的占位符里面的显示会告诉你是要传什么类型的参数进去</p>
+<h3 id="起始点为本地有项目">
+  起始点为本地有项目
+  <a class="heading-link" href="#%e8%b5%b7%e5%a7%8b%e7%82%b9%e4%b8%ba%e6%9c%ac%e5%9c%b0%e6%9c%89%e9%a1%b9%e7%9b%ae">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>初始化本地仓库
+<code>git init</code></li>
+<li>把代码提交到暂存区
+<code>git add .</code></li>
+<li>提交到本地仓库，并添加提交信息
+<code>git commit -m &quot;提交信息&quot;</code></li>
+<li>关联远程仓库地址(需要事先在github上面进行创建)
+<code>git remote add origin &lt;远程仓库的url&gt;</code></li>
+<li>现在是切换到了远程仓库的分支里面进行操作了
+<code>git add .</code></li>
+<li>提交到远程仓库
+<code>git commit -m &quot;提交信息&quot;</code></li>
+<li>推送到远程仓库
+<code>git push -u origin main</code></li>
+</ol>
+<h3 id="本地拉分支进行修改">
+  本地拉分支进行修改
+  <a class="heading-link" href="#%e6%9c%ac%e5%9c%b0%e6%8b%89%e5%88%86%e6%94%af%e8%bf%9b%e8%a1%8c%e4%bf%ae%e6%94%b9">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>查看本地所有分支，和上面一样可以在这个分支上面进行暂存和提交
+<code>git branch</code></li>
+<li>创建并切换分支
+<code>git checkout -b &lt;新分支名称&gt;</code></li>
+<li>创建远程分支并建立跟踪关系
+<code>git push -u origin &lt;远程分支名称&gt;</code></li>
+<li>后续只需要进行push和pull就可以了</li>
+</ol>
+<h3 id="对比和学习">
+  对比和学习
+  <a class="heading-link" href="#%e5%af%b9%e6%af%94%e5%92%8c%e5%ad%a6%e4%b9%a0">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>好的，完全理解！命令行虽然强大，但看代码差异确实不直观。下面我为你总结完整流程，并重点介绍如何<strong>用命令行调用直观的图形化工具</strong>来查看代码，两者结合才是最佳方案。</p>
+<h3 id="一核心流程与命令总结命令行">
+  一、核心流程与命令总结（命令行）
+  <a class="heading-link" href="#%e4%b8%80%e6%a0%b8%e5%bf%83%e6%b5%81%e7%a8%8b%e4%b8%8e%e5%91%bd%e4%bb%a4%e6%80%bb%e7%bb%93%e5%91%bd%e4%bb%a4%e8%a1%8c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>首先，这是查看更改和历史的核心流程，记住这个顺序：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">你的目的</th>
+          <th style="text-align: left">核心命令</th>
+          <th style="text-align: left">补充命令</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>1. 我想知道发生了什么</strong>（有哪些提交？）</td>
+          <td style="text-align: left"><code>git log --oneline --graph --all</code></td>
+          <td style="text-align: left"><code>git shortlog -sn</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>2. 我想看某次提交改了啥</strong>（具体代码？）</td>
+          <td style="text-align: left"><code>git show &lt;commit-hash&gt;</code></td>
+          <td style="text-align: left"><code>git log -p -1 &lt;commit-hash&gt;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>3. 我想比较两个状态</strong>（工作区/暂存区/分支）</td>
+          <td style="text-align: left"><code>git diff</code></td>
+          <td style="text-align: left"><code>git diff --staged</code> <code>git diff main..feature</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>4. 我想追踪一个文件的历史</strong></td>
+          <td style="text-align: left"><code>git log -p -- &lt;file-path&gt;</code></td>
+          <td style="text-align: left"><code>git blame &lt;file-path&gt;</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="二如何变得直观命令行启动图形化工具">
+  二、如何变得直观：命令行启动图形化工具
+  <a class="heading-link" href="#%e4%ba%8c%e5%a6%82%e4%bd%95%e5%8f%98%e5%be%97%e7%9b%b4%e8%a7%82%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%90%af%e5%8a%a8%e5%9b%be%e5%bd%a2%e5%8c%96%e5%b7%a5%e5%85%b7">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>你不需要离开命令行，只需要输入几个命令就能召唤出非常直观的图形界面。</p>
+<h4 id="方案一使用-git-内置的图形化工具--gitk">
+  方案一：使用 Git 内置的图形化工具 —— <code>gitk</code>
+  <a class="heading-link" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-git-%e5%86%85%e7%bd%ae%e7%9a%84%e5%9b%be%e5%bd%a2%e5%8c%96%e5%b7%a5%e5%85%b7--gitk">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>这是最简单、最直接的方法，<strong>所有版本Git都自带</strong>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 查看当前仓库的完整历史（最常用）</span>
+</span></span><span class="line"><span class="cl">gitk --all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 查看某个文件的历史</span>
+</span></span><span class="line"><span class="cl">gitk --all path/to/your/file.cs
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 查看最近100次提交</span>
+</span></span><span class="line"><span class="cl">gitk -n <span class="m">100</span>
+</span></span></code></pre></div><p><strong><code>gitk</code> 界面直观在哪？</strong></p>
+<ul>
+<li><strong>上半部分</strong>：清晰的提交历史树状图，分支合并一目了然。</li>
+<li><strong>下半部分</strong>：点击任意提交，立刻显示该提交的详细信息：作者、时间、注释。</li>
+<li><strong>右下部分</strong>：<strong>高亮显示代码差异</strong>，红色是删除的，绿色是新增的，看得清清楚楚。</li>
+</ul>
+<h4 id="方案二使用-git-difftool-和-git-mergetool">
+  方案二：使用 <code>git difftool</code> 和 <code>git mergetool</code>
+  <a class="heading-link" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-git-difftool-%e5%92%8c-git-mergetool">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>这些命令允许你用自己喜欢的图形化对比工具（如VS Code）来查看差异和解决冲突。</p>
+<p><strong>1. 首先，设置你喜欢的工具（以 VS Code 为例）：</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 设置默认的diff工具为vscode</span>
+</span></span><span class="line"><span class="cl">git config --global diff.tool vscode
+</span></span><span class="line"><span class="cl">git config --global difftool.vscode.cmd <span class="s1">&#39;code --wait --diff $LOCAL $REMOTE&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置默认的merge工具为vscode</span>
+</span></span><span class="line"><span class="cl">git config --global merge.tool vscode
+</span></span><span class="line"><span class="cl">git config --global mergetool.vscode.cmd <span class="s1">&#39;code --wait $MERGED&#39;</span>
+</span></span></code></pre></div><p><strong>2. 然后，就可以愉快地使用了：</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 用vscode查看工作区和暂存区的差异（代替 git diff）</span>
+</span></span><span class="line"><span class="cl">git difftool
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 用vscode查看暂存区和上次提交的差异（代替 git diff --staged）</span>
+</span></span><span class="line"><span class="cl">git difftool --staged
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 用vscode比较两个分支（代替 git diff main..feature）</span>
+</span></span><span class="line"><span class="cl">git difftool main..feature
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 用vscode解决合并冲突（超级好用！）</span>
+</span></span><span class="line"><span class="cl">git mergetool
+</span></span></code></pre></div><p>这样会用VS Code打开对比视图，左右分栏，颜色高亮，非常直观。</p>
+<h4 id="方案三配置更直观的-git-log终端内优化">
+  方案三：配置更直观的 <code>git log</code>（终端内优化）
+  <a class="heading-link" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e9%85%8d%e7%bd%ae%e6%9b%b4%e7%9b%b4%e8%a7%82%e7%9a%84-git-log%e7%bb%88%e7%ab%af%e5%86%85%e4%bc%98%e5%8c%96">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>如果你就是想呆在终端里，也可以让输出更直观：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 创建一个强大的git log别名，一次搞定</span>
+</span></span><span class="line"><span class="cl">git config --global alias.lg <span class="s2">&#34;log --color --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit --date=relative&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 以后只需要输入以下命令，就能看到彩色的、带分支线的、包含相对时间的日志</span>
+</span></span><span class="line"><span class="cl">git lg
+</span></span></code></pre></div><hr>
+<h3 id="三终极推荐工作流命令行--图形化">
+  三、终极推荐工作流（命令行 + 图形化）
+  <a class="heading-link" href="#%e4%b8%89%e7%bb%88%e6%9e%81%e6%8e%a8%e8%8d%90%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%91%bd%e4%bb%a4%e8%a1%8c--%e5%9b%be%e5%bd%a2%e5%8c%96">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>结合两者，你的高效工作流应该是这样的：</p>
+<ol>
+<li>
+<p><strong>在命令行里快速定位</strong>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 快速浏览一下提交历史，找到我感兴趣的那个提交的哈希值（比如 a1b2c3d）</span>
+</span></span><span class="line"><span class="cl">git log --oneline --graph -10
+</span></span></code></pre></div></li>
+<li>
+<p><strong>用图形化工具深入查看</strong>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 详细查看这个提交的具体改动，用图形界面看代码差异</span>
+</span></span><span class="line"><span class="cl">git show a1b2c3d
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者直接用gitk查看整个历史</span>
+</span></span><span class="line"><span class="cl">gitk --all
+</span></span></code></pre></div></li>
+<li>
+<p><strong>解决冲突或对比分支时</strong>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 直接召唤VS Code来进行直观的对比和合并</span>
+</span></span><span class="line"><span class="cl">git difftool main..my-branch
+</span></span><span class="line"><span class="cl">git mergetool
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="总结">
+  总结
+  <a class="heading-link" href="#%e6%80%bb%e7%bb%93">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">场景</th>
+          <th style="text-align: left">推荐命令</th>
+          <th style="text-align: left">优点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>快速浏览历史</strong></td>
+          <td style="text-align: left"><code>git lg</code> (自定义别名) 或 <code>git log --oneline --graph</code></td>
+          <td style="text-align: left">速度快，不离终端</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>详细分析提交</strong></td>
+          <td style="text-align: left"><code>gitk --all</code></td>
+          <td style="text-align: left"><strong>最直观</strong>，历史树+代码diff一目了然</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>对比代码差异</strong></td>
+          <td style="text-align: left"><code>git difftool</code> (需配置VS Code)</td>
+          <td style="text-align: left">用你最熟悉的编辑器高亮对比</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>解决合并冲突</strong></td>
+          <td style="text-align: left"><code>git mergetool</code> (需配置VS Code)</td>
+          <td style="text-align: left"><strong>救命神器</strong>，图形化解决冲突不再头疼</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>给你的建议：</strong>
+现在就试试 <code>gitk --all</code>，它是让你直观理解项目历史的最佳入门工具。之后再去配置 <code>git difftool</code> 和 <code>git mergetool</code> 到VS Code，这将极大提升你的开发体验。</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     liumo 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/liumo-game-blog/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

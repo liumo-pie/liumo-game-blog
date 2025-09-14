@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/liumo-game-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=liumo-game-blog/livereload" data-no-instant defer></script>
+  <title>
+  贪吃蛇小游戏流程总结和回顾 · liumo_game_blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="liumo">
+<meta name="description" content="重看贪吃蛇小游戏教程的笔记">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="贪吃蛇小游戏流程总结和回顾">
+  <meta name="twitter:description" content="重看贪吃蛇小游戏教程的笔记">
+
+<meta property="og:url" content="http://localhost:1313/liumo-game-blog/posts/website/first_one_hour_game_quest/">
+  <meta property="og:site_name" content="liumo_game_blog">
+  <meta property="og:title" content="贪吃蛇小游戏流程总结和回顾">
+  <meta property="og:description" content="重看贪吃蛇小游戏教程的笔记">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-29T16:14:50+08:00">
+    <meta property="article:modified_time" content="2025-08-29T16:14:50+08:00">
+    <meta property="article:tag" content="Godot">
+    <meta property="article:tag" content="Game">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/liumo-game-blog/posts/website/first_one_hour_game_quest/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/liumo-game-blog/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/liumo-game-blog/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/liumo-game-blog/">
+      liumo_game_blog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/liumo-game-blog/contact/">Contact</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/liumo-game-blog/posts/website/first_one_hour_game_quest/">
+              贪吃蛇小游戏流程总结和回顾
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-08-29T16:14:50&#43;08:00">
+                August 29, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/liumo-game-blog/authors/liumo/">Liumo</a></div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/liumo-game-blog/categories/summary/">Summary</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/liumo-game-blog/tags/godot/">Godot</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/liumo-game-blog/tags/game/">Game</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="贪吃蛇小游戏游戏基本设计原则">
+  贪吃蛇小游戏&ndash;游戏基本设计原则
+  <a class="heading-link" href="#%e8%b4%aa%e5%90%83%e8%9b%87%e5%b0%8f%e6%b8%b8%e6%88%8f%e6%b8%b8%e6%88%8f%e5%9f%ba%e6%9c%ac%e8%ae%be%e8%ae%a1%e5%8e%9f%e5%88%99">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="一问题记录">
+  一.问题记录
+  <a class="heading-link" href="#%e4%b8%80%e9%97%ae%e9%a2%98%e8%ae%b0%e5%bd%95">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<blockquote>
+<p>Q:什么时候要用到唯一名称访问</p>
+<blockquote>
+<p>移动也不会改变</p></blockquote></blockquote>
+<blockquote>
+<p>Q:_physic_process这个函数是什么时候调用的，和process是什么差别</p>
+<blockquote>
+<p>_physic_process是在每一帧中用积累时间判断的固定60hz的循环执行参数，用于移动、碰撞、物理的部分。<br>
+process每帧都执行，用于动画、UI、输入、游戏逻辑。<br>
+触发的类型事件就是用信号。</p></blockquote></blockquote>
+<blockquote>
+<p>Q:global这种类需要继承吗</p>
+<blockquote>
+<p>无需继承也能用</p></blockquote></blockquote>
+<blockquote>
+<p>Q:节点的移动是整个添加就可以吗 pos=head.position+move_dir*32</p>
+<blockquote>
+<p>是的</p></blockquote></blockquote>
+<blockquote>
+<p>Q:为什么要<code>if pos.x&lt;x_min: pos=Vector2(x_max,pos.y)</code>而不是直接pos.x=x_max</p>
+<blockquote>
+<p>其实是直接return Vector2(x_max,pos.y)</p></blockquote></blockquote>
+<blockquote>
+<p>Q:实例化的话类型是什么<code>var food_create=food.instantiate()</code></p>
+<blockquote>
+<p>就是food整个场景。</p></blockquote></blockquote>
+<blockquote>
+<p>Q:信号的函数到底放在哪里</p>
+<blockquote>
+<p>涉及到主逻辑的部分就放在主场景的脚本下，其他的可以放在对应的节点中。</p></blockquote></blockquote>
+<blockquote>
+<p>Q:不知道该怎么删除食物</p>
+<blockquote>
+<p>用碰撞检测信号函数的参数直接删除 area.queue_free()</p></blockquote></blockquote>
+<blockquote>
+<p>Q:随机食物要写在哪里，process里面吗，但是这个每帧都会刷新吧</p>
+<blockquote>
+<p>间接的信号触发</p></blockquote></blockquote>
+<blockquote>
+<p>Q:绑在节点上的脚本和不绑在节点上的脚本,和公用有关系吗</p>
+<blockquote>
+<p>没有关系，想要用不绑在节点上的脚本，export进来变成自己的参数就好了</p></blockquote></blockquote>
+<blockquote>
+<p>Q:什么时候需要打包场景变量，为什么要打包场景变量</p>
+<blockquote>
+<p>一般是要多次复用的场景会进行打包调用</p></blockquote></blockquote>
+<blockquote>
+<p>Q:group起到什么作用</p>
+<blockquote>
+<p>可以起到判断的作用，area.is_in_group(&ldquo;food&rdquo;)</p></blockquote></blockquote>
+<blockquote>
+<p>Q:写move_to这个函数的时候因为是蛇头和蛇身体公用的部分，自己只创建了蛇头，moveto需要执行的对象还有目标位置两个参数一时间不知道该怎么处理了。</p>
+<blockquote>
+<p>解决办法就是创建一个snake类，这个类由head和snake——part共同继承，这样两者都可以轻松的调用这个函数了。</p></blockquote></blockquote>
+<blockquote>
+<p>Q:为什么不会出现添加蛇尾，传入位置参数之后，last_position变动导致的错位问题</p>
+<blockquote>
+<p>因为游戏执行的基本单位是帧，是按照帧内函数顺序执行的，每一帧中的数据到下一帧之前是不会改变的。贪吃蛇中的_physics_process执行完了如果触发了碰撞检测，也会执行完这个碰撞函数到下一帧再次执行_physics_process，每一帧的状态几乎是静止的。</p></blockquote></blockquote>
+<h2 id="二流程回顾设计总结">
+  二.流程回顾(设计总结)
+  <a class="heading-link" href="#%e4%ba%8c%e6%b5%81%e7%a8%8b%e5%9b%9e%e9%a1%be%e8%ae%be%e8%ae%a1%e6%80%bb%e7%bb%93">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="1场景构建">
+  1.场景构建
+  <a class="heading-link" href="#1%e5%9c%ba%e6%99%af%e6%9e%84%e5%bb%ba">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>场景的叠加可以通过链接点击加到主场景中，类似于实时显示的分数条ui，spwaner代表了要加在场景上的食物和尾巴。一开始就要出现的都要链接进来，在脚本中的表现形式就是onready，节点的添加。其他的可以通过packedscene添加进来。</li>
+<li>packedscene的多复用场景const就可以。如果是ui界面记得添加一个if not 的判断。因为这里没有删除逻辑</li>
+<li>export的数据引入，需要用数据的时候，比如说资源脚本中的export，还有spwaner脚本想要用ground节点的限制，相当于是这样加成了子节点</li>
+</ol>
+<h3 id="2输入映射">
+  2.输入映射
+  <a class="heading-link" href="#2%e8%be%93%e5%85%a5%e6%98%a0%e5%b0%84">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h3 id="3信号系统">
+  3.信号系统
+  <a class="heading-link" href="#3%e4%bf%a1%e5%8f%b7%e7%b3%bb%e7%bb%9f">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>添加信号，就直接在开头<br>
+<code>signal food_eaten</code>这样就相当于是添加了一个信号到这个节点上，还可以传递参数<code>signal health_changed(old_value, new_value)</code>。信号的发送，<code>food_eaten.emit()</code>,触发函数的编写</p>
+<ol>
+<li>可视化连接，用节点和信号列表里面已经预设好的函数</li>
+<li>通过connect连接<code>player.health_changed.connect(_on_health_changed)</code>这样看一个信号似乎可以触发多个函数</li>
+<li>通过组连接多个实例
+<pre tabindex="0"><code class="language-func" data-lang="func"> # 将所有敌人添加到 &#34;enemies&#34; 组
+ for enemy in get_tree().get_nodes_in_group(&#34;enemies&#34;):
+     enemy.connect(&#34;enemy_died&#34;, self, &#34;_on_enemy_died&#34;)```
+</code></pre></li>
+<li>信号总线（还没有试过，之后研究）,</li>
+</ol>
+<p>断开连接<code>some_node.disconnect(&quot;some_signal&quot;, self, &quot;_some_method&quot;)</code>检查链接状态<code>if not some_node.is_connected(&quot;some_signal&quot;, self, &quot;_some_method&quot;): some_node.connect(&quot;some_signal&quot;, self, &quot;_some_method&quot;)</code>
+godot的好处就是可以在多次触发信号。<br>
+目前的问题</p>
+<blockquote>
+<p>Q:实现函数放在哪里比较好</p>
+<blockquote>
+<p>有主要逻辑放在主要逻辑，没有放在节点</p></blockquote></blockquote>
+<blockquote>
+<p>Q:如果是没有挂靠节点的脚本是同样处理的吗。</p>
+<blockquote>
+<p>是的</p></blockquote></blockquote>
+<blockquote>
+<p>Q:是一个信号可以触发很多函数，还是一个函数可以被不同地方的信号触发。</p>
+<blockquote>
+<p>都可以</p></blockquote></blockquote>
+<h3 id="4全局设置">
+  4.全局设置
+  <a class="heading-link" href="#4%e5%85%a8%e5%b1%80%e8%ae%be%e7%bd%ae">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>在设置中添加类和设置名称。</p>
+<h3 id="5删除节点的用法">
+  5.删除节点的用法
+  <a class="heading-link" href="#5%e5%88%a0%e9%99%a4%e8%8a%82%e7%82%b9%e7%9a%84%e7%94%a8%e6%b3%95">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>queue_free和call_deferred<br>
+一般是用call_deferred比较安全这个是下一帧开始的时候删除的。详细细节后面再了解。</p>
+<h3 id="6常见节点的使用">
+  6.常见节点的使用
+  <a class="heading-link" href="#6%e5%b8%b8%e8%a7%81%e8%8a%82%e7%82%b9%e7%9a%84%e4%bd%bf%e7%94%a8">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>贪吃蛇游戏中使用到的节点和用法</p>
+<ol>
+<li>Node2D</li>
+<li>Area2D:2D空间区域(可以检测到物体的进入和推出,所以下面必须有碰撞类Collsionshape2D,碰撞类不能单独作为节点,只需要看黄色的提示就足够了)仅是检测碰撞而不产生其他的效果就可以用这个节点,完美的适配贪吃蛇的头部.</li>
+<li>mark2D:用于设置边界检测</li>
+<li>TileLayer的使用。可以用tileset里面的参数改变基本的地图大小，然后再导入图集就可以看到按照参数的大小切割的图块。</li>
+</ol>
+<h3 id="7导出变量的使用">
+  7.导出变量的使用
+  <a class="heading-link" href="#7%e5%af%bc%e5%87%ba%e5%8f%98%e9%87%8f%e7%9a%84%e4%bd%bf%e7%94%a8">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>@export函数。添加新的参数节点到类里面，godot里面有对应得可视化，在侧边栏可以相应得调整。</p>
+<h3 id="8构建用户界面基本操作">
+  8.构建用户界面基本操作
+  <a class="heading-link" href="#8%e6%9e%84%e5%bb%ba%e7%94%a8%e6%88%b7%e7%95%8c%e9%9d%a2%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>Canvaslayer 控制渲染层级（可以用canvaslayer来控制游戏的界面展示，用层级来组织游戏）</li>
+<li>panel 界面白板</li>
+<li>各式各样的container</li>
+<li>label</li>
+<li>button</li>
+</ol>
+<p>ui界面和其他子场景相同，可以通过packedscene得形式添加到主场景中，一般是const。信号也是同样使用。</p>
+<h3 id="9内置的暂停">
+  9.内置的暂停
+  <a class="heading-link" href="#9%e5%86%85%e7%bd%ae%e7%9a%84%e6%9a%82%e5%81%9c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>自带的功能进入和推出  <code>func _notification(what: int) -&gt; void: match what: NOTIFICATION_ENTER_TREE: get_tree().paused=true NOTIFICATION_EXIT_TREE: get_tree().paused=false</code>
+注意process的使用</p>
+<h3 id="10场景转换get_tree">
+  10.场景转换（get_tree）
+  <a class="heading-link" href="#10%e5%9c%ba%e6%99%af%e8%bd%ac%e6%8d%a2get_tree">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>game_over的restart按钮想要重启gamepaly的场景，gettree然后reload</li>
+<li>退出所有场景gettree然后quit</li>
+<li>暂停场景（记得使用what，focus_out等判断），退出的时候要记得重新修改pause状态，场景内的按钮还想用的话要记得把node下的模式给改了。</li>
+<li>场景转换不需要实例化要转换的场景，直接change_scene_to_packed</li>
+<li>需要打包的一般是要getaparent然后addchildren，如果已经是parent就直接addchildren</li>
+</ol>
+<h3 id="11内存部分">
+  11.内存部分
+  <a class="heading-link" href="#11%e5%86%85%e5%ad%98%e9%83%a8%e5%88%86">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>1.创建一个资源类（一般放在data目录下面）extends Resource<br>
+多记忆相关函数</p>
+<pre tabindex="0"><code class="language-class_name" data-lang="class_name">   #意思是这个变量是可以被其他用的，resource需要使用export来保证自己得变量可用，node则不需要。
+   @export var higt_score:int=0
+   #tres为后缀的都是资源类型文件。地址是以string类型保存的。
+    const SAVE_PATH:String=&#34;user://save_data.tres&#34;
+
+   func save()-&gt;void:
+   #保存文件
+	   ResourceSaver.save(self,SAVE_PATH)
+	   pass
+	
+   #静态函数可以直接调用，有文件就load，没文件就创建
+   static  func load_or_create()-&gt; SaveData:
+	var res:SaveData
+   #godot的文件读写
+	if FileAccess.file_exists(SAVE_PATH):
+   #加载文件
+		res=load(SAVE_PATH) as SaveData
+	else:
+		res=SaveData.new()
+	return  res
+</code></pre><ol start="2">
+<li>添加到全局，新建一个savedata实例。</li>
+</ol>
+<pre tabindex="0"><code class="language-func" data-lang="func">	save_data=SaveData.load_or_create()
+</code></pre><ol start="3">
+<li>在开始场景里面调用global里面得savedata，并且可以直接访问里面得high_score
+<pre tabindex="0"><code class="language-Global.save_data.higt_score=n" data-lang="Global.save_data.higt_score=n"> 	Global.save_data.save()```
+</code></pre></li>
+</ol>
+<h3 id="12代码规范调整代码顺序">
+  12.代码规范（调整代码顺序）
+  <a class="heading-link" href="#12%e4%bb%a3%e7%a0%81%e8%a7%84%e8%8c%83%e8%b0%83%e6%95%b4%e4%bb%a3%e7%a0%81%e9%a1%ba%e5%ba%8f">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>const和preload部分</li>
+<li>exports变量</li>
+<li>onready变量</li>
+<li>普通变量</li>
+<li>任何需要访问其他节点或其属性的初始化操作，都必须放在 _ready() 函数内部</li>
+</ol>
+<h3 id="13getter和setter">
+  13.getter和setter
+  <a class="heading-link" href="#13getter%e5%92%8csetter">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h3 id="14命名规范">
+  14.命名规范
+  <a class="heading-link" href="#14%e5%91%bd%e5%90%8d%e8%a7%84%e8%8c%83">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>类，节点名&ndash;首字母大写</li>
+<li>变量，函数，信号名&ndash;小写和短横线</li>
+<li>常量&ndash;大写和短横线</li>
+</ol>
+<h2 id="三视频总结">
+  三.视频总结
+  <a class="heading-link" href="#%e4%b8%89%e8%a7%86%e9%a2%91%e6%80%bb%e7%bb%93">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>autoloads</li>
+<li>signals</li>
+<li>getters&amp;setters</li>
+<li>inheritanc</li>
+<li>ui&amp;layouts</li>
+<li>saving data</li>
+<li>player movement</li>
+<li>runtime instantiatiin</li>
+<li>godot_notifications</li>
+<li>pausing your game</li>
+<li>export&amp;onready vars</li>
+</ul>
+<h3 id="流程部分">
+  流程部分
+  <a class="heading-link" href="#%e6%b5%81%e7%a8%8b%e9%83%a8%e5%88%86">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>先进行基本移动逻辑的代码编写
+输入（input）控制物体移动<br>
+移动需要有速度，还有时间和方向。
+<blockquote>
+<p>Q:这个在godot里面是怎么处理的呢</p>
+<blockquote>
+<ol>
+<li>初始化一个方向参数Vector2
+<code>var move_dir:Vector2=Vector2.right</code></li>
+<li>制作移动物体，类型选择。需要检测碰撞所以选中了area2D，拖入场景</li>
+<li>编写移动物体的代码，引入蛇头<br>
+<code>@onready var head=%head as head</code>%标志意味着唯一访问标识，as Head判断了类型必须得是Head型的才行</li>
+<li>继续添加移动所需要的参数  <code>var time_between_move=1000.0   var time_science_last_move:float=0   var speed:float=1000</code></li>
+<li>闹钟移动vs直接移动
+经典版贪吃蛇用的是闹钟移动。用delta控制移动的时间<br>
+time_since_last_move（delta*speed）&gt;time_between_move。<br>
+速度不会直接起作用的，屏幕上物体的移动是通过坐标的改变，闹钟式移动就是通过改变移动的间隔来控制速度的。speed值越大就能越快的进行移动。
+delta的概念
+delta是每帧经过的时间，每帧都要完整的执行process以及触发的函数，每帧用时不同 ，每一帧使用的参数delta都是上一帧的用时。时间点: 0.000s - 帧1开始执行
+0.010s - 帧1执行结束 → 测得帧0到帧1的耗时 = 0.010s
+0.010s - 帧2开始，调用 _process(0.010) ← 使用上一帧的耗时
+0.043s - 帧2执行结束 → 测得帧1到帧2的耗时 = 0.033s<br>
+0.043s - 帧3开始，调用 _process(0.033) ← 使用上一帧的耗时
+0.060s - 帧3执行结束 → 测得帧2到帧3的耗时 = 0.017s
+_physics_process的delta是固定的，执行的次数是用累积时间来进行判断</li>
+</ol></blockquote></blockquote>
+<pre tabindex="0"><code class="language-var" data-lang="var">   const PHYSICS_STEP: float = 1.0 / 60.0
+   func main_loop():
+   # 1. 测量上一帧的耗时
+   var previous_frame_delta = get_measured_frame_time()
+
+   # 2. 调用_process（使用上一帧的耗时）
+   _process(previous_frame_delta)
+
+   # 3. 将上一帧的时间累积到物理accumulator
+   physics_accumulator += previous_frame_delta
+
+   # 4. 处理积压的物理帧（使用累积的过去时间）
+   while physics_accumulator &gt;= PHYSICS_STEP:
+     _physics_process(PHYSICS_STEP)  # 固定时间步长
+     physics_accumulator -= PHYSICS_STEP
+
+   # 5. 开始测量本帧的耗时（用于下一帧）
+   start_frame_time_measurement()```
+</code></pre></li>
+</ol>
+<p>执行过程如下帧0: 耗时 = 0.010s
+帧1: 耗时 = 0.033s<br>
+帧2: 耗时 = 0.017s</p>
+<p>执行过程：
+开始帧1:
+测得帧0耗时 = 0.010s
+调用 _process(0.010)
+accumulator += 0.010 → 0.010 &lt; 0.0167 → 0次物理调用</p>
+<p>开始帧2:
+测得帧1耗时 = 0.033s<br>
+调用 _process(0.033)
+accumulator += 0.033 → 0.043 ≥ 0.0167 → 2次物理调用
+accumulator = 0.043 - 0.0167 - 0.0167 = 0.0096</p>
+<p>开始帧3:
+测得帧2耗时 = 0.017s
+调用 _process(0.017)
+accumulator += 0.017 → 0.0266 ≥ 0.0167 → 1次物理调用
+accumulator = 0.0266 - 0.0167 = 0.0099</p>
+<ol>
+<li>帧开始</li>
+<li>处理输入事件</li>
+<li>调用游戏逻辑process</li>
+<li>处理消息队列（信号就在其中）</li>
+<li>调用物理逻辑_physics_process</li>
+<li>执行物理模拟</li>
+<li>再次处理消息队列（物理产生的信号） 在物理模拟过程中新触发的信号。比如说移动贪吃蛇了之后，产生了碰撞，这个触发的信号要在这一帧结束</li>
+<li>渲染绘制</li>
+<li>帧结束</li>
+</ol>
+<p>，帧数越少，delta就越大，这样可以保证每个机子上面的移动速度是相同的，因为游戏中的刷新是按帧刷新的。每一帧都会执行以下函数。<code>func _physics_process(delta: float) -&gt; void: time_since_last_move+=delta*speed if  time_since_last_move&gt;=time_between_moves: update_snake() time_since_last_move=0 pass</code><br>
+满一秒之后就会跑完速度长，把不稳定的帧率转换为了稳定的每秒。每一秒1000个像素点。</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     liumo 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/liumo-game-blog/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

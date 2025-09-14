@@ -2,8 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/liumo-game-blog/</loc>
+    <lastmod>2025-09-14T18:41:41+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/posts/</loc>
+    <lastmod>2025-09-14T18:41:41+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/posts/website/git%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2025-09-13T07:50:52+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/liumo-game-blog/authors/</loc>
-    <lastmod>2025-08-29T16:14:50+08:00</lastmod>
+    <lastmod>2025-09-10T16:09:23+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/authors/liumo/</loc>
+    <lastmod>2025-09-10T16:09:23+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/liumo-game-blog/posts/website/visual_novel_make/</loc>
+    <lastmod>2025-09-10T16:09:23+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/liumo-game-blog/categories/</loc>
     <lastmod>2025-08-29T16:14:50+08:00</lastmod>
@@ -14,22 +29,13 @@
     <loc>http://localhost:1313/liumo-game-blog/tags/godot/</loc>
     <lastmod>2025-08-29T16:14:50+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/liumo-game-blog/authors/liumo/</loc>
-    <lastmod>2025-08-29T16:14:50+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/liumo-game-blog/</loc>
-    <lastmod>2025-08-29T16:14:50+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/liumo-game-blog/posts/</loc>
-    <lastmod>2025-08-29T16:14:50+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/liumo-game-blog/categories/summary/</loc>
     <lastmod>2025-08-29T16:14:50+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/liumo-game-blog/tags/</loc>
     <lastmod>2025-08-29T16:14:50+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/liumo-game-blog/posts/first_one_hour_game_quest/</loc>
+    <loc>http://localhost:1313/liumo-game-blog/posts/website/first_one_hour_game_quest/</loc>
     <lastmod>2025-08-29T16:14:50+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/liumo-game-blog/tags/blog/</loc>
